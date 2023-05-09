@@ -9,6 +9,10 @@ module.exports = defineConfig({
     video: false,
     defaultCommandTimeout: 10000,
     screenshotOnRunFailure: true,
+    reporter: "cypress-multi-reporters",
+    reporterOptions: {
+      configFile: "reporter-config.json",
+    },
     env: {
       sh_homepage: "https://www.simplyhealth.co.uk/",
       member_portal: "https://www.simplyhealth.co.uk/member-portal",

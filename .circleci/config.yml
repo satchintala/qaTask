@@ -13,11 +13,11 @@ jobs:
       - run:
           name: Run tests
           command: |
-            npm test
+            npm run test-headless
       - run:
          name: Generate Reports
           command: |
-            npm run report
+            npm run mochawesome-merge
 workflows:
   execute_tests:
     jobs:
