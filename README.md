@@ -7,9 +7,8 @@ This repo contains sample e2e tests written in Cypress
 
 #  Help + Testing #
 
-If you want to experiment with running this project
-
-
+If you want to experiment with running this project:
+```
 #### clone this repo to a local directory
 git clone https://github.com/satchintala/qatask.git
 
@@ -27,3 +26,4 @@ npm run mochawesome-merge
         
 #### use npm scripts in package.json to run Cypress tests and generate mochawesome report
 npm run cypress-tests
+```
