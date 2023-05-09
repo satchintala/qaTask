@@ -8,7 +8,7 @@ This repo contains sample e2e tests written in Cypress
 
 If you want to experiment with running this project:
 ```
-## clone [this repo][https://github.com/satchintala/qatask.git] to a local directory
+## clone [this repo] (https://github.com/satchintala/qatask.git) to a local directory
 git clone https://github.com/satchintala/qatask.git
 
 ## cd into the cloned repo
