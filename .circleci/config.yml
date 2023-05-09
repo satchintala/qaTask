@@ -15,7 +15,7 @@ jobs:
           command: |
             npm run test-headless
       - run:
-         name: Generate Reports
+          name: Generate Reports
           command: |
             npm run mochawesome-merge
 workflows:
