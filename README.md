@@ -6,11 +6,10 @@ This repo contains few e2e tests written in Cypress
 * Pet Store: 4 tests - POST, GET, PUT, DELETE
 
 #  Help + Testing #
-===================
 
 If you want to experiment with running this project
 
-Markup :  `code()`
+`code()`
 ## clone this repo to a local directory
 git clone https://github.com/satchintala/qatask.git
 
@@ -25,8 +24,6 @@ npm run test-headless
 
 ## use npm scripts in package.json to generate mochawesome report
 npm run mochawesome-merge
-  
-                  OR 
         
 ## use npm scripts in package.json to run Cypress tests and generate mochawesome report
 npm run cypress-tests
