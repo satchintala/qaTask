@@ -22,7 +22,7 @@ jobs:
           command: |
             npm run mochawesome-merge
       - store_artifacts:
-          path: mochawesome-report/mochawesome.html
+          path: mochawesome-report
 workflows:
   execute_tests:
     jobs:
