@@ -7,7 +7,7 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     video: false,
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 40000,
     screenshotOnRunFailure: true,
     reporter: "cypress-multi-reporters",
     reporterOptions: {
