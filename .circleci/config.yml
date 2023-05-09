@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   run_task:
     docker:
-      - image: node:18-buster
+      - image: node:18-bullseye
     steps:
       - checkout
       - run:
