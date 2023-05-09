@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   run_task:
     docker:
-      - image: cimg/node:18.14.1
+      - image: node:18-buster
     steps:
       - checkout
       - run:
