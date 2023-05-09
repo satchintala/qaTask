@@ -1,22 +1,8 @@
 version: 2.1
-jobs:
-  run_task:
-    docker:
-      - image: cimg/node:18.14.1
-    steps:
-      - run:
-          name: Install Deps
-          command: |
-            npm install
-      - run:
-          name: Run tests
-          command: |
-            npm run test-headless
-      - run:
-          name: Generate Reports
-          command: |
-            npm run mochawesome-merge
+orbs:
+  cypress: cypress-io/cypress@3
 workflows:
-  execute_tests:
+  build:
     jobs:
-      - run_task
+      - cypress/run:
+          start-command: "npm run test-headless"
