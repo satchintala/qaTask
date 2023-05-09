@@ -28,7 +28,6 @@ describe("Login Tests", () => {
 
   //Custom Login Command
   it("Login using custom command", () => {
-    cy.get("a[href$='/member-portal']").click();
     cy.get("@user").then((user) => {
       cy.login(user.email, user.password);
     });
