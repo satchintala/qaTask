@@ -1,5 +1,5 @@
 {
-  "reporterEnabled": "spec, cypress-multi-reporters",
+  "reporterEnabled": "cypress-multi-reporters",
   "reporterOptions": {
     "reporterEnabled": "mochawesome",
     "mochawesomeReporterOptions": {
