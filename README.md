@@ -1,5 +1,4 @@
-# qatask
-QA task
+# QA Task
 
 This repo contains sample e2e tests written in Cypress
 * Simply Health: 2 tests - visting home page and first step in personal member registration
