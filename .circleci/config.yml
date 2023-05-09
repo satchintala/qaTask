@@ -21,6 +21,8 @@ jobs:
           name: Generate Reports
           command: |
             npm run mochawesome-merge
+      - store_artifacts:
+          path: mochawesome-report
 workflows:
   execute_tests:
     jobs:
