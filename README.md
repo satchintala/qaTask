@@ -9,7 +9,7 @@ This repo contains few e2e tests written in Cypress
 
 If you want to experiment with running this project
 
-`code()`
+
 ### clone this repo to a local directory
 git clone https://github.com/satchintala/qatask.git
 
