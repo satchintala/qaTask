@@ -1,29 +1,21 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
 version: 2.1
-jobs:
-  run_task:
-    docker:
-      - image: node:18-bullseye
-    steps:
-      - checkout
-      - run:
-          name: Install System Deps
-          command: |
-            apt-get update && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
-      - run:
-          name: Install Deps
-          command: |
-            npm install
-      - run:
-          name: Run tests
-          command: |
-            npm run test-headless
-      - run:
-          name: Generate Reports
-          command: |
-            npm run mochawesome-merge
-      - store_artifacts:
-          path: mochawesome-report
+
+# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
+# See: https://circleci.com/docs/orb-intro/
+orbs:
+  node: circleci/node@4.7
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  execute_tests:
+  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - run_task
+      - node/test:
+          # This is the node version to use for the `cimg/node` tag
+          # Relevant tags can be found on the CircleCI Developer Hub
+          # https://circleci.com/developer/images/image/cimg/node
+          version: '16.10'
+          # If you are using yarn, change the line below from "npm" to "yarn"
+          pkg-manager: npm
